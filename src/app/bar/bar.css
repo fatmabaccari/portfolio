@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+  @apply  text-primary dark:text-secondary hover:text-yellow-500 dark:hover:text-white transition-colors duration-200;
+}
+
+
+.contact-link {
+  @apply text-primary  dark:text-secondary hover:text-yellow-500 dark:hover:text-white transition-colors duration-200 font-medium;
+}
+
+/* Dropdown menu */
+.contact-menu {
+  @apply relative inline-block bg-transparent ;
+}
+
+.contact-menu ul {
+  @apply absolute mt-1 space-y-1 bg-secondaryg dark:bg-gray-900 shadow-lg rounded-md overflow-hidden z-50 min-w-[10px];
+}
+
+.contact-menu li a {
+  @apply flex items-center space-x-3 px-2 py-1 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition-colors duration-200;
+}
+
+/* Mobile links */
+.mobile-link {
+  @apply block px-2 py-1 text-primary dark:text-secondary hover:text-yellow-500 dark:hover:text-white rounded;
+}
+
+/* Button toggle */
+.button-toggle {
+  @apply flex items-center space-x-2 px-4 py-2 bg-transparent  rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200;
+}
