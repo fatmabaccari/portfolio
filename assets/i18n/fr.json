@@ -1,0 +1,110 @@
+{
+  "NAV": {
+    "LOGO": "Fatma Baccari",
+    "ABOUT": "À propos de moi",
+    "PROJECTS": "Projets & Expériences Professionnelles",
+    "CONTACT": "Contact",
+    "DARK_MODE": "Basculer le mode sombre",
+    "MOBILE_MENU": "Menu mobile"
+  },
+  "CONTACT_LINKS": [
+    {
+      "name": "Email",
+      "url": "mailto:contact@example.com",
+      "icon": "assets/icons/email.json",
+      "external": false
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/baccari-fatma-3b8a952b5/",
+      "icon": "assets/icons/linkedin.json",
+      "external": true
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/fatma-baccari",
+      "icon": "assets/icons/github.json",
+      "external": true
+    }
+  ],
+  "HOME": {
+    "TITLE": "Bienvenue dans mon portfolio",
+    "DESCRIPTION": "Étudiante en informatique & développeuse logiciel",
+    "PROJECTS": "Voir les projets"
+  },
+  "ABOUT": {
+    "TITLE": "À propos de moi",
+    "PARAGRAPH1": "Je suis Fatma Baccari, une informaticienne passionnée de Tunisie. J'ai obtenu une licence en Génie Logiciel et Systèmes d'Information à la Faculté des Sciences de Sfax (FSS), Université de Sfax. Actuellement, je poursuis un Master en Systèmes, Réseaux et Cloud Computing, où je continue à explorer comment la technologie peut résoudre des problèmes réels et façonner l'avenir.",
+    "PARAGRAPH2": "Animée par la curiosité et la détermination, je vois chaque défi comme une opportunité d'innover et de grandir. Au-delà du codage, je valorise le travail d'équipe, l'adaptabilité et l'apprentissage continu — des qualités qui me permettent de combiner créativité et précision dans tout ce que je fais."
+  },
+  "PROJECTS": {
+    "TITLE": "Projets & Expériences Professionnelles",
+    "DESCRIPTION": "Découvrez mes projets personnels et mes stages.",
+    "PERSONAL": "Projets Académiques & Personnels",
+    "INTERNSHIPS": "Expériences de Stage",
+    "SEE_MORE": "Voir plus de projets →",
+    "WEATHERLY": {
+      "TITLE": "Weatherly - Application Météo",
+      "TAG": "Développement Mobile",
+      "DESCRIPTION": "Développement d'une application Android native suivant une architecture MVC avec consommation d'API REST. Intégration de l'API OpenWeatherMap avec parsing JSON et gestion asynchrone des requêtes réseau.",
+      "LINK": "Accéder au dépôt GitHub",
+      "TECH": [
+        "Android SDK",
+        "Java",
+        "API REST",
+        "Parsing JSON",
+        "Layouts XML",
+        "AsyncTask"
+      ]
+    },
+    "DROWSINESS": {
+      "TITLE": "Système de Détection de Somnolence",
+      "TAG": "Vision par Ordinateur",
+      "DESCRIPTION": "Mise en œuvre d'un système de vision par ordinateur utilisant le machine learning supervisé. Pipeline de traitement d'image incluant la détection faciale Haar Cascade, extraction de caractéristiques et classification avec SVM.",
+      "LINK": "Accéder au dépôt GitHub",
+      "TECH": [
+        "OpenCV",
+        "Machine Learning",
+        "Python",
+        "scikit-learn",
+        "Haar Cascade",
+        "Classificateur SVM",
+        "Traitement temps réel"
+      ]
+    },
+    "METHODOLOGIES": {
+      "TITLE": "Expertise Technique & Méthodologies",
+      "LIST": [
+        {
+          "abbr": "AG",
+          "title": "Agile & Scrum",
+          "description": "Méthodologies agiles, cycles de développement itératifs, planification des sprints",
+          "color": "blue"
+        },
+        {
+          "abbr": "MS",
+          "title": "Microservices",
+          "description": "Architecture distribuée, API Gateway, conteneurisation Docker",
+          "color": "green"
+        },
+        {
+          "abbr": "ERP",
+          "title": "Systèmes d'Entreprise",
+          "description": "Implémentation ERP, workflows métiers, gestion des processus",
+          "color": "purple"
+        }
+      ]
+    },
+    "INTERNSHIPS.AUTH": {
+      "TITLE": "Microservices d'authentification avec Keycloak et Kafka",
+      "TAG": "Architecture Microservices",
+      "DESCRIPTION": "Développement d’un service d’identité dans une architecture microservices, intégrant Keycloak avec une base de données personnalisée et une sécurité API complète via NestJS. Mise en œuvre de Kafka pour la communication asynchrone entre services et déploiement orchestré avec Docker. Côté front-end, création d’une interface Angular entièrement personnalisée, sans utiliser le thème natif de Keycloak, mettant en valeur l’expérience utilisateur et la cohérence graphique."
+    },
+    "INTERNSHIPS.ODOO": {
+      "TITLE": "Module Odoo ERP - Chaîne Logistique",
+      "TAG": "Implémentation ERP",
+      "DESCRIPTION": "Développement d’un module personnalisé sur Odoo ERP pour l’automatisation de la gestion des stocks. Modélisation des données, développement des flux métiers et intégration avec le module d’inventaire existant."
+    },
+    "INTERNSHIPS.VIEW_CERTIFICATE": "Voir l’attestation de stage"
+  }
+}

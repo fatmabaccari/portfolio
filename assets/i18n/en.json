@@ -1,0 +1,110 @@
+{
+  "NAV": {
+    "LOGO": "Fatma Baccari",
+    "ABOUT": "About Me",
+    "PROJECTS": "Projects & Professional Experience",
+    "CONTACT": "Contact",
+    "DARK_MODE": "Toggle Dark Mode",
+    "MOBILE_MENU": "Mobile Menu"
+  },
+  "CONTACT_LINKS": [
+    {
+      "name": "Email",
+      "url": "mailto:contact@example.com",
+      "icon": "assets/icons/email.json",
+      "external": false
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/fatma-baccari",
+      "icon": "assets/icons/linkedin.json",
+      "external": true
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/fatma-baccari",
+      "icon": "assets/icons/github.json",
+      "external": true
+    }
+  ],
+  "HOME": {
+    "TITLE": "Welcome to My Portfolio",
+    "DESCRIPTION": "Computer Science student & Software Developer",
+    "PROJECTS": "view projects"
+  },
+  "ABOUT": {
+    "TITLE": "About Me",
+    "PARAGRAPH1": "I’m Fatma Baccari, a passionate computer scientist from Tunisia. I graduated with a Bachelor's degree in Software Engineering and Information Systems from the Faculty of Sciences of Sfax (FSS), University of Sfax. Currently, I am pursuing a Master's in Systems, Networks, and Cloud Computing, where I continue to explore how technology can solve real-world problems and shape the future.",
+    "PARAGRAPH2": "Driven by curiosity and determination, I see every challenge as an opportunity to innovate and grow. Beyond coding, I value teamwork, adaptability, and lifelong learning — qualities that allow me to combine creativity with precision in everything I do."
+  },
+  "PROJECTS": {
+    "TITLE": "Projects & Professional Experience",
+    "DESCRIPTION": "Discover my personal projects and professional internships.",
+    "PERSONAL": "Personal & Academic Projects",
+    "INTERNSHIPS": "Internship Experiences",
+    "SEE_MORE": "See more projects →",
+    "INTERNSHIPS.AUTH": {
+      "TITLE": "Authentication Microservices with Keycloak and Kafka",
+      "TAG": "Microservices Architecture",
+      "DESCRIPTION": "Development of an identity service in a microservices architecture, integrating Keycloak with a custom database and comprehensive API security via NestJS. Implementation of Kafka for asynchronous communication between services and orchestrated deployment with Docker. On the front-end side, creation of a fully customized Angular interface, without using the native Keycloak theme, highlighting user experience and graphic consistency."
+    },
+    "INTERNSHIPS.ODOO": {
+      "TITLE": "Odoo ERP Module - Supply Chain",
+      "TAG": "ERP Implementation",
+      "DESCRIPTION": "Development of a customized module on Odoo ERP for stock management automation. Data modeling, business workflow development, and integration with the existing inventory module."
+    },
+    "INTERNSHIPS.VIEW_CERTIFICATE": "View Internship Certificate",
+ 
+  "WEATHERLY": {
+    "TITLE": "Weatherly - Weather Application",
+    "TAG": "Mobile Development",
+    "DESCRIPTION": "Development of a native Android application implementing an MVC architecture with REST API consumption. Integration of the OpenWeatherMap API with JSON data parsing and asynchronous network request management.",
+    "LINK": "Access GitHub Repository",
+    "TECH": [
+      "Android SDK",
+      "Java",
+      "RESTful API",
+      "JSON Parsing",
+      "XML Layouts",
+      "AsyncTask"
+    ]
+  },
+  "DROWSINESS": {
+    "TITLE": "Drowsiness Detection System",
+    "TAG": "Computer Vision",
+    "DESCRIPTION": "Implementation of a computer vision system using supervised machine learning. Image processing pipeline including Haar Cascade facial detection, feature extraction, and classification with SVM.",
+    "LINK": "Access GitHub Repository",
+    "TECH": [
+      "OpenCV",
+      "Machine Learning",
+      "Python",
+      "scikit-learn",
+      "Haar Cascade",
+      "SVM Classifier",
+      "Real-time Processing"
+    ]
+  },
+  "METHODOLOGIES": {
+    "TITLE": "Technical Expertise & Methodologies",
+    "LIST": [
+      {
+        "abbr": "AG",
+        "title": "Agile & Scrum",
+        "description": "Agile methodologies, iterative development cycles, sprint planning",
+        "color": "blue"
+      },
+      {
+        "abbr": "MS",
+        "title": "Microservices",
+        "description": "Distributed architecture, API Gateway, Docker containerization",
+        "color": "green"
+      },
+      {
+        "abbr": "ERP",
+        "title": "Enterprise Systems",
+        "description": "ERP implementation, business workflows, process management",
+        "color": "purple"
+      }
+    ]
+  }
+}}
