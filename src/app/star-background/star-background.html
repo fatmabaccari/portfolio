@@ -1,4 +1,8 @@
-<div
+<div class="absolute inset-0 overflow-hidden z-0">
+  <!-- Mode sombre : Étoiles et météores -->
+  @if (darkMode) {
+    <!-- Étoiles -->
+   <div
   class="fixed inset-0 overflow-hidden pointer-events-none z-0 transition-colors duration-700"
   [ngClass]="darkMode ? 'bg-gray-900' : 'bg-white'">
 
@@ -34,4 +38,24 @@
     </div>
   </ng-container>
 
+</div>
+  }
+  
+  <!-- Mode clair : Cercles colorés -->
+  @else {
+    @for (circle of circles; track circle.id) {
+      <div 
+        class="absolute rounded-full animate-pulse-slow bg-gradient-to-br blur-xl"
+        [class]="circle.colorFrom + ' ' + circle.colorTo"
+        [style]="{
+          'top': circle.top,
+          'left': circle.left,
+          'width': circle.size,
+          'height': circle.size,
+          'opacity': circle.opacity,
+          'animation-delay': circle.delay + 's'
+        }">
+      </div>
+    }
+  }
 </div>

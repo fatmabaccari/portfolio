@@ -1,238 +1,268 @@
-
-<section
-  id="projects"
-  class="py-20 bg-secondaryg dark:bg-transparent "
->
+<section id="projects" class="py-20 dark:bg-transparent">
   <div class="max-w-7xl mx-auto px-6">
     <!-- Section Header -->
     <div class="text-center mb-16">
       <h2
         class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-400 mb-4"
       >
-        Projects & Professional Experience
+        {{ 'PROJECTS.TITLE' | translate }}
       </h2>
       <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-        Discover my software engineering achievements.
+        {{ 'PROJECTS.TITLE' | translate }}
       </p>
     </div>
+<div class="mb-20">
+  <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-10 text-center">
+    {{ 'PROJECTS.INTERNSHIPS' | translate }}
+  </h3>
 
-    <!-- Projects Grid -->
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
-      <!-- Weatherly Project -->
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+    <!-- Authentication Microservices Internship -->
+    <div
+      class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-purple-100 dark:border-gray-700"
+    >
       <div
-        class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-blue-100 dark:border-gray-700"
-      >
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 group-hover:from-blue-500/10 group-hover:to-cyan-500/10"
-        ></div>
-        <div class="relative p-8">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">
-              Weatherly - Weather Application
-            </h3>
-            <span
-              class="px-3 py-1 bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-300 text-sm font-medium rounded-full"
-              >Mobile Development</span
-            >
-          </div>
-          <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-            <strong>Development of a native Android application</strong> implementing an MVC architecture with REST API consumption. Integration of the OpenWeatherMap API with JSON data parsing and asynchronous network request management.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="tech-tag">Android SDK</span>
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">RESTful API</span>
-            <span class="tech-tag">JSON Parsing</span>
-            <span class="tech-tag">XML Layouts</span>
-            <span class="tech-tag">AsyncTask</span>
-          </div>
-          <a
-            href="https://github.com/fatmabaccari/Weatherly-Application-m-t-o-Android"
-            target="_blank"
-            class="inline-flex items-center font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+        class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 group-hover:from-purple-500/10 group-hover:to-pink-500/10"
+      ></div>
+      <div class="relative p-8">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white">
+            {{ 'PROJECTS.INTERNSHIPS.AUTH.TITLE' | translate }}
+          </h3>
+          <span
+            class="px-3 py-1 bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 text-sm font-medium rounded-full"
+            >{{ 'PROJECTS.INTERNSHIPS.AUTH.TAG' | translate }}</span
           >
-            Access GitHub Repository
-            <svg
-              class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </a>
         </div>
-      </div>
-
-      <!-- Drowsiness Detector Project -->
-      <div
-        class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-green-100 dark:border-gray-700"
-      >
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 group-hover:from-green-500/10 group-hover:to-emerald-500/10"
-        ></div>
-        <div class="relative p-8">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">
-              Drowsiness Detection System
-            </h3>
-            <span
-              class="px-3 py-1 bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-300 text-sm font-medium rounded-full"
-              >Computer Vision</span
-            >
-          </div>
-          <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-            <strong>Implementation of a computer vision system</strong> using supervised machine learning. Image processing pipeline including Haar Cascade facial detection, feature extraction, and classification with SVM.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="tech-tag">OpenCV</span>
-            <span class="tech-tag">Machine Learning</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">scikit-learn</span>
-            <span class="tech-tag">Haar Cascade</span>
-            <span class="tech-tag">SVM Classifier</span>
-            <span class="tech-tag">Real-time Processing</span>
-          </div>
-          <a
-            href="https://github.com/fatmabaccari/drowsiness-detector"
-            target="_blank"
-            class="inline-flex items-center font-semibold text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 transition-colors"
+        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+          {{ 'PROJECTS.INTERNSHIPS.AUTH.DESCRIPTION' | translate }}
+        </p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="tech-tag">NestJS</span>
+          <span class="tech-tag">Keycloak</span>
+          <span class="tech-tag">Angular</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Kafka</span>
+          <span class="tech-tag">Microservices Architecture</span>
+          <span class="tech-tag">JWT Tokens</span>
+          <span class="tech-tag">OAuth2</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">API REST</span>
+          <span class="tech-tag">Swagger Documentation</span>
+        </div>
+        <a
+          href="https://drive.google.com/file/d/11CrT1D-12AlMoBa15htAORZMx5qkfUjg/view"
+          target="_blank"
+          class="inline-flex items-center font-semibold text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 transition-colors"
+        >
+          {{ 'PROJECTS.INTERNSHIPS.VIEW_CERTIFICATE' | translate }}
+          <svg
+            class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+            fill="currentColor"
+            viewBox="0 0 20 20"
           >
- Access GitHub Repository
-            <svg
-              class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Authentication Microservices Project -->
-      <div
-        class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-purple-100 dark:border-gray-700"
-      >
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 group-hover:from-purple-500/10 group-hover:to-pink-500/10"
-        ></div>
-        <div class="relative p-8">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">
-              Authentication Microservices with Keycloak and Kafka
-            </h3>
-            <span
-              class="px-3 py-1 bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-300 text-sm font-medium rounded-full"
-              >Microservices Architecture</span
-            >
-          </div>
-          <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-            Development of an identity service in a microservices architecture, integrating 
-            <strong>Keycloak</strong> with a custom database and comprehensive API security via <strong>NestJS</strong>. 
-            Implementation of <strong>Kafka</strong> for asynchronous communication between services and orchestrated deployment with <strong>Docker</strong>. 
-            On the front-end side, creation of a fully customized <strong>Angular</strong> interface, without using the native Keycloak theme, 
-            highlighting user experience and graphic consistency.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="tech-tag">NestJS</span>
-            <span class="tech-tag">Keycloak</span>
-            <span class="tech-tag">Angular</span>
-            <span class="tech-tag">Docker</span>
-            <span class="tech-tag">Kafka</span>
-            <span class="tech-tag">Microservices Architecture</span>
-            <span class="tech-tag">JWT Tokens</span>
-            <span class="tech-tag">OAuth2</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">API REST</span>
-            <span class="tech-tag">Swagger Documentation</span>
-          </div>
-          <a
-            href="https://drive.google.com/file/d/11CrT1D-12AlMoBa15htAORZMx5qkfUjg/view"
-            target="_blank"
-            class="inline-flex items-center font-semibold text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 transition-colors"
-          >
-            View Internship Certificate
-            <svg
-              class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- MCG Internship -->
-      <div
-        class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-orange-100 dark:border-gray-700"
-      >
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 group-hover:from-orange-500/10 group-hover:to-red-500/10"
-        ></div>
-        <div class="relative p-8">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">
-              Odoo ERP Module - Supply Chain
-            </h3>
-            <span
-              class="px-3 py-1 bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-300 text-sm font-medium rounded-full"
-              >ERP Implementation</span
-            >
-          </div>
-          <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-            <strong>Development of a customized module on Odoo ERP</strong> for stock management automation. Data modeling, business workflow development, and integration with the existing inventory module.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="tech-tag">Odoo ERP</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">Supply Chain Management</span>
-            <span class="tech-tag">Business Logic</span>
-            <span class="tech-tag">QWeb Templates</span>
-            <span class="tech-tag">OVH Deployment</span>
-            <span class="tech-tag">Scrum Methodology</span>
-          </div>
-          <a
-            href="https://drive.google.com/file/d/1413OPCYPVDJxyTpfpX0qKhxdDptXnMBl/view"
-            target="_blank"
-            class="inline-flex items-center font-semibold text-orange-600 dark:text-orange-400 hover:text-orange-800 dark:hover:text-orange-300 transition-colors"
-          >
-       View Internship Certificate
-            <svg
-              class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </a>
-        </div>
+            <path
+              fill-rule="evenodd"
+              d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 
+              0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 
+              0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
       </div>
     </div>
+
+    <!-- Odoo ERP Internship -->
+    <div
+      class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-orange-100 dark:border-gray-700"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 group-hover:from-orange-500/10 group-hover:to-red-500/10"
+      ></div>
+      <div class="relative p-8">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white">
+            {{ 'PROJECTS.INTERNSHIPS.ODOO.TITLE' | translate }}
+          </h3>
+          <span
+            class="px-3 py-1 bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-300 text-sm font-medium rounded-full"
+            >{{ 'PROJECTS.INTERNSHIPS.ODOO.TAG' | translate }}</span
+          >
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+          {{ 'PROJECTS.INTERNSHIPS.ODOO.DESCRIPTION' | translate }}
+        </p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="tech-tag">Odoo ERP</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Supply Chain Management</span>
+          <span class="tech-tag">Business Logic</span>
+          <span class="tech-tag">QWeb Templates</span>
+          <span class="tech-tag">OVH Deployment</span>
+          <span class="tech-tag">Scrum Methodology</span>
+        </div>
+        <a
+          href="https://drive.google.com/file/d/1413OPCYPVDJxyTpfpX0qKhxdDptXnMBl/view"
+          target="_blank"
+          class="inline-flex items-center font-semibold text-orange-600 dark:text-orange-400 hover:text-orange-800 dark:hover:text-orange-300 transition-colors"
+        >
+          {{ 'PROJECTS.INTERNSHIPS.VIEW_CERTIFICATE' | translate }}
+          <svg
+            class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 
+              0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 
+              0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Personal / Academic Projects -->
+    <div class="mb-20">
+      <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-10 text-center">
+        {{ 'PROJECTS.PERSONAL' | translate }}
+      </h3>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+        <!-- Weatherly Project -->
+        <div
+          class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-blue-100 dark:border-gray-700"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 group-hover:from-blue-500/10 group-hover:to-cyan-500/10"
+          ></div>
+          <div class="relative p-8">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-white">
+                {{ 'PROJECTS.WEATHERLY.TITLE' | translate }}
+              </h3>
+              <span
+                class="px-3 py-1 bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-300 text-sm font-medium rounded-full"
+              >
+                {{ 'PROJECTS.WEATHERLY.TAG' | translate }}</span
+              >
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+              {{ 'PROJECTS.WEATHERLY.DESCRIPTION' | translate }}
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="tech-tag">Android SDK</span>
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">RESTful API</span>
+              <span class="tech-tag">JSON Parsing</span>
+              <span class="tech-tag">XML Layouts</span>
+              <span class="tech-tag">AsyncTask</span>
+            </div>
+            <a
+              href="https://github.com/fatmabaccari/Weatherly-Application-m-t-o-Android"
+              target="_blank"
+              class="inline-flex items-center font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+            >
+              {{ 'PROJECTS.WEATHERLY.LINK' | translate }}
+              <svg
+                class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Drowsiness Detector Project -->
+        <div
+          class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-green-100 dark:border-gray-700"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 group-hover:from-green-500/10 group-hover:to-emerald-500/10"
+          ></div>
+          <div class="relative p-8">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-white">
+                {{ 'PROJECTS.DROWSINESS.TITLE' | translate }}
+              </h3>
+              <span
+                class="px-3 py-1 bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-300 text-sm font-medium rounded-full"
+              >
+                {{ 'PROJECTS.DROWSINESS.TAG' | translate }}</span
+              >
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+              {{ 'PROJECTS.DROWSINESS.DESCRIPTION' | translate }}
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">scikit-learn</span>
+              <span class="tech-tag">Haar Cascade</span>
+              <span class="tech-tag">SVM Classifier</span>
+              <span class="tech-tag">Real-time Processing</span>
+            </div>
+            <a
+              href="https://github.com/fatmabaccari/drowsiness-detector"
+              target="_blank"
+              class="inline-flex items-center font-semibold text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 transition-colors"
+            >
+              {{ 'PROJECTS.DROWSINESS.LINK' | translate }}
+              <svg
+                class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a
+          href="https://github.com/fatmabaccari"
+          target="_blank"
+          class="inline-flex items-center px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl shadow-lg hover:opacity-90 transition"
+        >
+          {{ 'PROJECTS.SEE_MORE' | translate }}
+          <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 
+              010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 
+              11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 
+              0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    
 
     <!-- Methodologies Section -->
     <div
       class="mt-16 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 border border-gray-200 dark:border-gray-700"
     >
       <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">
-        Technical Expertise & Methodologies
+        {{ 'PROJECTS.METHODOLOGIES.TITLE' | translate }}
       </h3>
       <div class="grid md:grid-cols-3 gap-6">
         <div class="text-center">
@@ -272,17 +302,3 @@
     </div>
   </div>
 </section>
-
-<style>
-  .tech-tag {
-    @apply px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-full border border-gray-200 dark:border-gray-600;
-  }
-
-  .group:hover .tech-tag {
-    @apply bg-gray-200 dark:bg-gray-600 transform scale-105 transition-transform;
-  }
-
-  .tech-tag:hover {
-    @apply bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-300 dark:border-blue-600;
-  }
-</style>

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, Input, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
 import { Lordicon } from '../lordicon/lordicon';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 interface ContactLink {
   name: string;
@@ -11,7 +12,7 @@ interface ContactLink {
 
 @Component({
   selector: 'app-bar',
-  imports: [CommonModule, Lordicon],
+  imports: [CommonModule, Lordicon,TranslateModule],
   templateUrl: './bar.html',
   styleUrls: ['./bar.css'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -19,10 +20,19 @@ interface ContactLink {
 export class Bar implements OnInit {
   isOpen = false;
   opencontact = false;
+    @Input() darkMode = true;
+  @Output() darkModeToggled = new EventEmitter<boolean>();
+  @HostListener('document:click', ['$event'])
+  onClick(event: Event) {
+    const target = event.target as HTMLElement;
+    if (!target.closest('.contact-menu')) {
+      this.opencontact = false;
+    }
+  }
 
   contactLinks: ContactLink[] = [
     { name: 'Github', url: 'https://github.com/fatmabaccari', icon: 'assets/icons/github.json', external: true },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/feed?...', icon: 'assets/icons/linkdin.json', external: true },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/baccari-fatma-3b8a952b5/', icon: 'assets/icons/linkdin.json', external: true },
     { name: 'Email', url: 'mailto:baccarifatma842003@gmail.com', icon: 'assets/icons/gmail.json' },
     { name: 'Mobile', url: 'tel:+21655398410', icon: 'assets/icons/mobile.json' }
   ];
@@ -31,13 +41,6 @@ export class Bar implements OnInit {
     this.opencontact = !this.opencontact;
   }
 
-  @HostListener('document:click', ['$event'])
-  onClick(event: Event) {
-    const target = event.target as HTMLElement;
-    if (!target.closest('.contact-menu')) {
-      this.opencontact = false;
-    }
-  }
 scrollToSection(id: string) {
   const element = document.getElementById(id);
   if (!element) return;
@@ -66,13 +69,17 @@ scrollToSection(id: string) {
 }
 
 
-  @Input() darkMode = true;
-  @Output() darkModeToggled = new EventEmitter<boolean>();
 
-  ngOnInit() {
-    this.darkMode = localStorage.getItem('theme') === 'dark';
-    this.updateTheme();
+
+ngOnInit() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    this.darkMode = savedTheme === 'dark';
+  } else {
+    this.darkMode = true; 
   }
+  this.updateTheme();
+}
 
   toggleMenu() {
     this.isOpen = !this.isOpen;
@@ -84,13 +91,27 @@ scrollToSection(id: string) {
     this.darkModeToggled.emit(this.darkMode);
   }
 
-  private updateTheme() {
-    if (this.darkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
+private updateTheme() {
+  if (this.darkMode) {
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  }
+}
+
+
+  currentLang: 'en' | 'fr' = 'fr';
+
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['en', 'fr']);
+    this.translate.setDefaultLang(this.currentLang);
+    this.translate.use(this.currentLang);
+  }
+
+  toggleLang() {
+    this.currentLang = this.currentLang === 'en' ? 'fr' : 'en';
+    this.translate.use(this.currentLang);
   }
 }

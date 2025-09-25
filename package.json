@@ -30,6 +30,8 @@
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
     "@lordicon/element": "^2.0.1",
+    "@ngx-translate/core": "^17.0.0",
+    "@ngx-translate/http-loader": "^17.0.0",
     "lottie-web": "^5.13.0",
     "phosphor-icons": "^1.4.2",
     "rxjs": "~7.8.0",

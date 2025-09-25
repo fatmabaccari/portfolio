@@ -10,7 +10,7 @@ export default {
       colors: {
         primary: '#8c6295ff',
         secondary: '#debae7ff',
-         secondaryg: '#f0e7f3ff',
+         secondaryg: '#efe8f1ff',
       },
        boxShadow: {
         'yellow': '0 4px 6px -1px rgba(249, 35, 199, 0.4), 0 2px 4px -2px rgba(100, 100, 14, 0.3)',
@@ -19,6 +19,7 @@ export default {
     fontFamily: {
       poppins: ['Paprika', 'sans-serif'],
     },
+ 
     },
   },
   plugins: [],

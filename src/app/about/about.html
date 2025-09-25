@@ -1,21 +1,17 @@
-<section id="about" class="py-16 bg-secondaryg dark:bg-transparent">
-  <div class="max-w-3xl mx-auto text-center px-4">
-    <h2 class="text-4xl font-extrabold text-primary dark:text-secondary mb-6">
-      About Me
-    </h2>
-    <p class="text-lg text-gray-800 dark:text-gray-200 leading-relaxed">
-      I’m Fatma Baccari, a passionate computer scientist from Tunisia. 
-      I graduated with a <span class="italic">Bachelor’s degree in Software Engineering and Information Systems</span> 
-      from the <span class="font-medium">Faculty of Sciences of Sfax (FSS), University of Sfax</span>. 
-      Currently, I am pursuing a <span class="italic">Master’s in Systems, Networks, and Cloud Computing</span>, 
-      where I continue to explore how technology can <span class="underline decoration-primary/60">solve real-world problems</span> 
-      and shape the future.
-    </p>
-    <p class="text-lg text-gray-800 dark:text-gray-200 leading-relaxed mt-6">
-      Driven by curiosity and determination, I see every challenge as an opportunity to 
-      <span class="font-medium">innovate and grow</span>. Beyond coding, I value teamwork, adaptability, 
-      and lifelong learning — qualities that allow me to combine 
-      creativitywith precision in everything I do.
-    </p>
+<section id="about" class="py-32 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto text-center px-6 relative z-10">
+    <!-- Conteneur avec fond semi-transparent pour lisibilité -->
+    <div class="bg-white/70 dark:bg-gray-900 backdrop-blur-md rounded-xl p-8">
+      <h2 class="text-2xl md:text-7xl font-extrabold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-400 mb-12 animate-fade-in">
+        {{ 'ABOUT.TITLE' | translate }}
+      </h2>
+      <p class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-900 dark:text-gray-200 leading-relaxed md:leading-loose mb-8 animate-slide-up">
+        {{ 'ABOUT.PARAGRAPH1' | translate }}
+      </p>
+      <p class="text-xl md:text-2xl max-w-4xl mx-auto text-gray-900 dark:text-gray-200 leading-relaxed md:leading-loose animate-slide-up delay-200">
+        {{ 'ABOUT.PARAGRAPH2' | translate }}
+      </p>
+    </div>
   </div>
 </section>
+

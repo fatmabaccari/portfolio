@@ -1,89 +1,169 @@
 <nav
-  class="bg-secondaryg bg-opacity-100 dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800 fixed w-full top-0 left-0 z-50 transition-colors duration-300 shadow-yellow dark:shadow-violet"
+  class="bg-white bg-opacity-100 dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800 fixed w-full top-0 left-0 z-50 transition-colors duration-300 shadow-yellow dark:shadow-violet"
   role="navigation"
   aria-label="Main navigation"
 >
-
-
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto px-6 sm:px-4 lg:px-6">
     <div class="flex justify-between items-center h-16">
-
       <!-- Logo -->
-      <a href="/" class="text-2xl font-extrabold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent ">
+      <a
+        href="/"
+        class="text-2xl font-extrabold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent"
+      >
         Fatma Baccari
       </a>
 
       <!-- Desktop Links -->
       <div class="hidden md:flex items-center space-x-6">
-     <a (click)="scrollToSection('about')" class="nav-link">About Me</a>
-     <a (click)="scrollToSection('projects')" class="nav-link">     Projects & Expériences Professionnelles</a>
- 
-    
+        <a (click)="scrollToSection('about')" class="nav-link"> {{ 'NAV.ABOUT' | translate }}</a>
+        <a (click)="scrollToSection('projects')" class="nav-link">
+          {{ 'NAV.PROJECTS' | translate }}</a
+        >
 
         <!-- Contact Dropdown -->
-        <div class="relative contact-menu " aria-haspopup="true" [attr.aria-expanded]="opencontact">
-          <button (click)="togglecontactMenu()" class="button-toggle bg-transparent ">
-            <span class="nav-link">Contact</span>
-            <svg [ngClass]="{'rotate-180': opencontact}" class="w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        <div class="relative contact-menu" aria-haspopup="true" [attr.aria-expanded]="opencontact">
+          <button (click)="togglecontactMenu()" class="button-toggle bg-transparent">
+            <span class="nav-link">{{ 'NAV.CONTACT' | translate }}</span>
+            <svg
+              [ngClass]="{ 'rotate-180': opencontact }"
+              class="w-5 h-5 text-gray-500 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
           </button>
 
-          <ul *ngIf="opencontact" class="absolute mt-1 space-y-1 bg-primary dark:bg-transparant shadow-md overflow-hidden z-50 min-w-[160px] ">
+          <ul
+            *ngIf="opencontact"
+            class="absolute mt-1 space-y-1 bg-primary dark:bg-transparant shadow-md overflow-hidden z-50 min-w-[160px]"
+          >
             <li *ngFor="let link of contactLinks">
-              <a [href]="link.url" [target]="link.external ? '_blank' : '_self'" class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition rounded">
-                <app-lordicon [src]="link.icon" width="28px" height="28px" color="primary"></app-lordicon>
-                <span class="text-gray-700 dark:text-gray-200  ">{{ link.name }}</span>
+              <a
+                [href]="link.url"
+                [target]="link.external ? '_blank' : '_self'"
+                class="flex items-center space-x-3 px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition rounded"
+              >
+                <app-lordicon
+                  [src]="link.icon"
+                  width="28px"
+                  height="28px"
+                  color="primary"
+                ></app-lordicon>
+                <span class="text-gray-700 dark:text-gray-200">{{ link.name }}</span>
               </a>
             </li>
           </ul>
         </div>
+      
       </div>
 
-      <!-- Dark Mode Button -->
-      <button (click)="toggleDarkMode()" class="ml-4 p-2 rounded-full text-gray-700 dark:text-gray-200 transition-colors duration-300" aria-label="Toggle dark mode">
-        <svg *ngIf="darkMode" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-13.66l-.7.7M5.05 18.95l-.7.7M21 12h1M2 12H1m16.95 6.95l-.7-.7M5.05 5.05l-.7-.7M12 5a7 7 0 100 14 7 7 0 000-14z"/>
+
+ 
+      <!-- Lang switch button -->
+  <button
+  (click)="toggleLang()"
+  class="flex items-center gap-2 px-3 py-1 rounded-lg dark:bg-gray-600
+        nav-link transition"
+>
+  <img *ngIf="currentLang === 'en'" src="assets/icons/french.png" alt="FR" class="w-5 h-5" />
+  <img *ngIf="currentLang === 'fr'" src="assets/icons/english-language.png" alt="EN" class="w-5 h-5" />
+  <span>{{ currentLang === 'en' ? 'FR' : 'EN' }}</span>
+</button>
+       <!-- Dark Mode Button -->
+      <button
+        (click)="toggleDarkMode()"
+        class="ml-4 p-2 rounded-full text-gray-700 dark:text-gray-200 transition-colors duration-300"
+        aria-label="Toggle dark mode"
+      >
+        <svg
+          *ngIf="darkMode"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 stroke-yellow-400"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m8.66-13.66l-.7.7M5.05 18.95l-.7.7M21 12h1M2 12H1m16.95 6.95l-.7-.7M5.05 5.05l-.7-.7M12 5a7 7 0 100 14 7 7 0 000-14z"
+          />
         </svg>
-        <app-lordicon *ngIf="!darkMode" src="assets/icons/moon.json" width="32px" height="32px" color="primary"></app-lordicon>
+        <app-lordicon
+          *ngIf="!darkMode"
+          src="assets/icons/moon.json"
+          width="32px"
+          height="32px"
+       
+        ></app-lordicon>
       </button>
 
       <!-- Mobile Menu Button -->
-      <button (click)="toggleMenu()" class="md:hidden p-2 rounded " aria-label="Toggle menu" [attr.aria-expanded]="isOpen">
-        <svg class="w-6 h-6 text-gray-700 dark:text-gray-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path *ngIf="!isOpen" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-          <path *ngIf="isOpen" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      <button
+        (click)="toggleMenu()"
+        class="md:hidden p-2 rounded"
+        aria-label="Toggle menu"
+        [attr.aria-expanded]="isOpen"
+      >
+        <svg
+          class="w-6 h-6 text-gray-700 dark:text-gray-200"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            *ngIf="!isOpen"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+          <path
+            *ngIf="isOpen"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
         </svg>
       </button>
     </div>
   </div>
 
+  <!-- Mobile Menu -->
+  <div
+    [ngClass]="{ 'opacity-100 max-h-screen': isOpen, 'opacity-0 max-h-0 overflow-hidden': !isOpen }"
+    class="md:hidden bg-secondaryg dark:bg-gray-900 shadow-md transition-all duration-300 ease-in-out"
+  >
+    <a (click)="scrollToSection('about')" class="mobile-link"> {{ 'NAV.ABOUT' | translate }}</a>
+    <a (click)="scrollToSection('projects')" class="mobile-link">
+      {{ 'NAV.PROJECTS' | translate }}</a
+    >
 
- <!-- Mobile Menu -->
-<div
-  [ngClass]="{'opacity-100 max-h-screen': isOpen, 'opacity-0 max-h-0 overflow-hidden': !isOpen}"
-  class="md:hidden bg-secondaryg dark:bg-gray-900 shadow-md transition-all duration-300 ease-in-out"
->
-<a (click)="scrollToSection('about')" class="mobile-link">About Me</a>
-<a (click)="scrollToSection('projects')" class="mobile-link"> Projects & Professional Experience</a>
-
- 
-
-  <!-- Social Icons (Mobile) -->
-  <div class="flex space-x-4 px-4 py-4">
-    <ng-container *ngFor="let link of  contactLinks">
-      <a [href]="link.url" [target]="link.external ? '_blank' : '_self'" class="flex items-center">
-        <app-lordicon
-          [src]="link.icon"
-          width="28px"
-          height="28px"
-          color="primary"
-          [attr.aria-label]="link.name"
-        ></app-lordicon>
-      </a>
-    </ng-container>
+    <!-- Social Icons (Mobile) -->
+    <div class="flex space-x-4 px-4 py-4">
+      <ng-container *ngFor="let link of contactLinks">
+        <a
+          [href]="link.url"
+          [target]="link.external ? '_blank' : '_self'"
+          class="flex items-center"
+        >
+          <app-lordicon
+            [src]="link.icon"
+            width="28px"
+            height="28px"
+            color="primary"
+            [attr.aria-label]="link.name"
+          ></app-lordicon>
+        </a>
+      </ng-container>
+    </div>
   </div>
-</div>
-
 </nav>
